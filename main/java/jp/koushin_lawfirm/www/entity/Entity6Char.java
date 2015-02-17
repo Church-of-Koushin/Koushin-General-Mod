@@ -1,4 +1,4 @@
-package jp.koushin_lawfirm.www.core;
+package jp.koushin_lawfirm.www.entity;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntityChicken;

@@ -1,6 +1,11 @@
 package jp.koushin_lawfirm.www.core;
 
+import jp.koushin_lawfirm.www.entity.EntityLawyer;
+import jp.koushin_lawfirm.www.entity.EntityNukePrimed;
+import jp.koushin_lawfirm.www.entity.RenderLawyer;
+import jp.koushin_lawfirm.www.entity.RenderNukePrimed;
 import net.minecraft.client.model.ModelBiped;
+import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelZombie;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -14,6 +19,9 @@ public class ClientProxy extends CommonProxy {
 		super.preInit(event);
 		RenderingRegistry.registerEntityRenderingHandler(EntityLawyer.class,
 				new RenderLawyer(new ModelZombie(), 0.5F));
+		RenderingRegistry.registerEntityRenderingHandler(EntityNukePrimed.class,
+				new RenderNukePrimed());
+
 	}
 
 	@Override

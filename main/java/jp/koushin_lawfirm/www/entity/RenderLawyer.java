@@ -1,4 +1,4 @@
-package jp.koushin_lawfirm.www.core;
+package jp.koushin_lawfirm.www.entity;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

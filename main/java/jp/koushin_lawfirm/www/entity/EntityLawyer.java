@@ -1,8 +1,9 @@
 package jp.koushin_lawfirm.www.entity;
 
+import jp.koushin_lawfirm.www.core.KoushinCore;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.world.World;
 
 public class EntityLawyer extends EntityMob {
@@ -16,7 +17,8 @@ public class EntityLawyer extends EntityMob {
 
 		for (int k = 0; k < j; ++k) {
 
+			this.dropItem(Item.getItemFromBlock(KoushinCore.blockTNTNuke), 1);
 			this.dropItem(Items.porkchop, 1);
-		}
+			}
 	}
 }

@@ -1,16 +1,15 @@
 package jp.koushin_lawfirm.www.block;
 
 import jp.koushin_lawfirm.www.entity.EntityNukePrimed;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockTNT;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockTNTNuke extends BlockTNT {
 	@SideOnly(Side.CLIENT)
@@ -25,6 +24,7 @@ public class BlockTNTNuke extends BlockTNT {
 	public BlockTNTNuke() {
 		super();
 		this.setBlockName("tntNuke");
+		this.setStepSound(Block.soundTypeGrass);
 	}
 
 	@Override

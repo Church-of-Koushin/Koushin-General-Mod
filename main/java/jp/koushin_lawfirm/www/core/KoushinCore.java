@@ -3,15 +3,16 @@ package jp.koushin_lawfirm.www.core;
 import jp.koushin_lawfirm.www.block.BlockTNTNuke;
 import jp.koushin_lawfirm.www.entity.Entity6Char;
 import jp.koushin_lawfirm.www.entity.EntityLawyer;
+import jp.koushin_lawfirm.www.entity.EntityNukePrimed;
 import jp.koushin_lawfirm.www.item.Item6Char;
 import net.minecraft.block.BlockDispenser;
-import net.minecraft.dispenser.IBehaviorDispenseItem;
+import net.minecraft.dispenser.BehaviorDefaultDispenseItem;
 import net.minecraft.dispenser.IBlockSource;
-import net.minecraft.dispenser.IPosition;
-import net.minecraft.entity.effect.EntityLightningBolt;
-import net.minecraft.init.Blocks;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -33,7 +34,7 @@ public class KoushinCore {
 
 	// Items&Blocks
 	private static Item6Char item6Char;
-	private static BlockTNTNuke blockTNTNuke;
+	public static BlockTNTNuke blockTNTNuke;
 
 	// 以下init類
 	@EventHandler

@@ -50,7 +50,23 @@ public class KoushinCore {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-
+		// Dispenserによる射出
+        BlockDispenser.dispenseBehaviorRegistry.putObject(Item.getItemFromBlock(blockTNTNuke), new BehaviorDefaultDispenseItem()
+        {
+            private static final String __OBFID = "CL_00001403";
+            protected ItemStack dispenseStack(IBlockSource p_82487_1_, ItemStack p_82487_2_)
+            {
+                EnumFacing var3 = BlockDispenser.func_149937_b(p_82487_1_.getBlockMetadata());
+                World var4 = p_82487_1_.getWorld();
+                int var5 = p_82487_1_.getXInt() + var3.getFrontOffsetX();
+                int var6 = p_82487_1_.getYInt() + var3.getFrontOffsetY();
+                int var7 = p_82487_1_.getZInt() + var3.getFrontOffsetZ();
+                EntityNukePrimed var8 = new EntityNukePrimed(var4, (double)((float)var5 + 0.5F), (double)((float)var6 + 0.5F), (double)((float)var7 + 0.5F),(EntityLivingBase)null);
+                var4.spawnEntityInWorld(var8);
+                --p_82487_2_.stackSize;
+                return p_82487_2_;
+            }
+        });
 		// 諸Entity
 		EntityRegistry.registerModEntity(EntityLawyer.class, "Lawyer", 200,
 				this, 80, 1, true);

@@ -25,6 +25,7 @@ public class BlockTNTNuke extends BlockTNT {
 	public BlockTNTNuke() {
 		super();
 		this.setBlockName("tntNuke");
+		this.setStepSound(Block.soundTypeGrass);
 	}
 
 	@Override
